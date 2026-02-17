@@ -26,13 +26,13 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class AIWebClientConfig {
 
-    @Value("${ai.service.url}")
-    private String aiServiceUrl;
+//    @Value("${ai.service.url}")
+//    private String aiServiceUrl;
 
     @Bean
     public WebClient aiWebClient() {
         return WebClient.builder()
-                .baseUrl(aiServiceUrl)
+                .baseUrl("https://smart-pricing-ai-cx0n.onrender.com")
                 .build();
     }
 }
